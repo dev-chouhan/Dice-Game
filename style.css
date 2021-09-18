@@ -1,0 +1,110 @@
+body{
+    background-color: #393E46;
+}
+/*************************************************************** FIRST container  */
+.mainHeading{
+    font-size: 8rem;
+    text-align: center;
+    color: #4ECCA3;
+    font-family: 'Lobster', cursive;
+    margin: 25px 0 80px 0px;
+}
+/*********************************************** Second container (contain Text + Dice) */
+.gameContainer{
+    margin-bottom: 5%;
+    padding: 0 250px 0 250px;
+    color: #4ECCA3;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.container01 , .container02{
+    flex-direction: column;
+}
+.IDName{
+    margin-bottom: 25px;
+    font-family: 'Indie Flower', cursive;
+}
+img{
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+    text-shadow: 5px 0 #232931;
+}
+
+/*********************************************************** For button  */
+.box-3{
+    margin: 0 0 3% 40%;
+}
+.btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+}
+
+.btn-three {
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
+}
+.btn-three::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.3s;
+}
+.btn-three:hover::before {
+    opacity: 0 ;
+    transform: scale(0.5,0.5);
+}
+.btn-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.5);
+    transform: scale(1.2,1.2);
+}
+.btn-three:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+}
+/*********************************************************** For Footer  */
+footer{
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 415px){
+
+    .mainHeading{
+        font-size: 2.5rem;
+    }
+    img{
+        height: 100px;
+        width: 100px;
+    }
+    .gameContainer{
+        padding: 0;
+        justify-content: space-evenly;
+
+    }
+    .box-3{
+        margin: 100px 0 138px 14%;
+    }
+}
